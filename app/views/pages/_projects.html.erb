@@ -1,0 +1,105 @@
+<%# TODO: replace with my real project details and links %>
+<% 
+  projects = [
+    {
+      title: "Rails Custom Page Builder Engine",
+      description: "A WordPress-inspired drag-and-drop CMS & page builder engine built directly into Rails, allowing non-technical marketing managers to compose dynamic landing pages.",
+      tags: ["Ruby on Rails", "ActiveRecord", "JavaScript", "jQuery", "MySQL"],
+      demo_url: "#",
+      github_url: "#"
+    },
+    {
+      title: "Legacy Monolith Rails Migration Suite",
+      description: "Led migration of legacy Rails 3.3.6 / Ruby 1.8.7 monolith into a modern Ruby on Rails application with updated gem dependencies, improved security, and 45% faster response times.",
+      tags: ["Ruby on Rails", "Devise", "RSpec", "ActiveRecord", "Linux"],
+      demo_url: "#",
+      github_url: "#"
+    },
+    {
+      title: "Automated Task & Log Monitoring Platform",
+      description: "Production log analyzer and cron automation system using the Whenever gem, parsing Rails & Nginx access/error logs to detect N+1 query slowdowns and trigger automated cleanup jobs.",
+      tags: ["Ruby on Rails", "Whenever Gem", "Nginx Logs", "Cron Jobs", "AWS EC2"],
+      demo_url: "#",
+      github_url: "#"
+    }
+  ]
+%>
+
+<section id="projects" class="py-24 relative overflow-hidden">
+  <!-- Radial Ambient Glow -->
+  <div class="absolute bottom-0 left-10 w-96 h-96 rounded-full radial-glow-cyan pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Heading -->
+    <div class="flex flex-col items-start mb-16" data-controller="reveal">
+      <span data-reveal-target="item" class="text-xs font-mono font-semibold uppercase tracking-widest text-teal-400 mb-2">04 // FEATURED PROJECTS</span>
+      <h2 data-reveal-target="item" class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+        Highlighted Engineering Work
+      </h2>
+      <p data-reveal-target="item" class="text-slate-400 text-sm font-mono mt-2">
+        <%# TODO: replace with my real project details and links %>
+        Click links below to preview demo code or repository entries.
+      </p>
+    </div>
+
+    <!-- Project Cards Grid with 3D Tilt -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-controller="reveal" data-reveal-stagger-value="0.15">
+      
+      <% projects.each do |project| %>
+        <div data-reveal-target="item" data-controller="tilt-card" class="glass-card p-8 rounded-3xl flex flex-col justify-between group transform-gpu cursor-pointer">
+          <div>
+            <!-- Card Header Icon & Badge -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 group-hover:scale-110 group-hover:bg-teal-500/20 transition-all">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] font-mono font-semibold uppercase tracking-widest text-slate-400 px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700">RAILS APP</span>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-teal-400 transition-colors">
+              <%= project[:title] %>
+            </h3>
+            
+            <p class="text-slate-300 text-sm font-light leading-relaxed mb-6">
+              <%= project[:description] %>
+            </p>
+          </div>
+
+          <div>
+            <!-- Tech Stack Tags -->
+            <div class="flex flex-wrap gap-2 mb-8 pt-4 border-t border-slate-800/80">
+              <% project[:tags].each do |tag| %>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono text-slate-300 bg-slate-800/90 border border-slate-700">
+                  <%= tag %>
+                </span>
+              <% end %>
+            </div>
+
+            <!-- Action Links -->
+            <div class="flex items-center justify-between gap-4">
+              <a href="<%= project[:demo_url] %>" class="inline-flex items-center gap-1.5 text-xs font-semibold font-mono text-teal-400 hover:text-teal-300 transition-colors">
+                <span>Live Demo</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+
+              <a href="<%= project[:github_url] %>" class="inline-flex items-center gap-1.5 text-xs font-semibold font-mono text-slate-400 hover:text-white transition-colors">
+                <span>GitHub</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<!-- Top Scroll Progress Bar -->
+<div data-controller="progress-bar" class="fixed top-0 left-0 right-0 h-1 z-50 bg-slate-900/50">
+  <div data-progress-bar-target="bar" class="h-full bg-gradient-to-r from-teal-400 via-cyan-400 to-emerald-400 w-0 transition-all duration-75 shadow-[0_0_10px_rgba(45,212,191,0.8)]"></div>
+</div>
+
+<!-- Glassmorphism Sticky Navbar -->
+<header data-controller="nav" data-nav-target="nav" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-5 bg-[#0b0f19]/60 backdrop-blur-md border-b border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-cyan-400 flex items-center justify-center text-slate-950 font-bold font-display text-xl shadow-lg shadow-teal-500/20 group-hover:scale-105 transition-transform">
+          B
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg text-slate-100 group-hover:text-teal-400 transition-colors tracking-tight">
+            B. Bala Bharathi
+          </span>
+          <span class="text-xs text-slate-400 font-mono tracking-wider uppercase">Rails Developer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#about" data-nav-target="link" class="text-sm text-slate-400 hover:text-teal-400 transition-colors tracking-wide">Who Am I</a>
+        <a href="#experience" data-nav-target="link" class="text-sm text-slate-400 hover:text-teal-400 transition-colors tracking-wide">Experience</a>
+        <a href="#skills" data-nav-target="link" class="text-sm text-slate-400 hover:text-teal-400 transition-colors tracking-wide">Skills</a>
+        <a href="#projects" data-nav-target="link" class="text-sm text-slate-400 hover:text-teal-400 transition-colors tracking-wide">Projects</a>
+        <a href="#contact" data-nav-target="link" class="text-sm text-slate-400 hover:text-teal-400 transition-colors tracking-wide">Contact</a>
+      </nav>
+
+      <!-- Action Button & Mobile Menu Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-500/10 border border-teal-500/30 hover:bg-teal-500/20 hover:border-teal-500/50 transition-all shadow-md shadow-teal-500/10">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+          Hire Me
+        </a>
+
+        <button data-action="click->nav#toggleMenu" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div data-nav-target="menu" class="hidden md:hidden mt-4 pt-4 border-t border-slate-800/80 flex flex-col gap-3 pb-2 animate-fadeIn">
+      <a href="#about" data-action="click->nav#closeMenu" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-slate-800/60 hover:text-teal-400">Who Am I</a>
+      <a href="#experience" data-action="click->nav#closeMenu" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-slate-800/60 hover:text-teal-400">Experience</a>
+      <a href="#skills" data-action="click->nav#closeMenu" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-slate-800/60 hover:text-teal-400">Skills</a>
+      <a href="#projects" data-action="click->nav#closeMenu" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-slate-800/60 hover:text-teal-400">Projects</a>
+      <a href="#contact" data-action="click->nav#closeMenu" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-slate-800/60 hover:text-teal-400">Contact</a>
+    </div>
+  </div>
+</header>
