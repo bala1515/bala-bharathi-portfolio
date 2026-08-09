@@ -17,6 +17,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # Use Tailwind CSS for styling
 gem "tailwindcss-rails"
+# Explicit network gems for deployment compatibility
+gem "net-pop"
+gem "net-protocol"
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
